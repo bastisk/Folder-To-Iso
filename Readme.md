@@ -2,7 +2,7 @@
 
 This simple application creates an ISO File out of all files of a given folder.
 
-![](G:\Development\Projects\2019\ISOMaker\Screenshot.PNG)
+![](Screenshot.PNG)
 
 Simply select a source folder and an output file and hit the `Create ISO` button.
 
