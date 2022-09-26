@@ -46,7 +46,13 @@ namespace IsoMaker
             foreach (FileInfo file in folder.GetFiles())
             {
                 string fileFullPath = file.FullName;
-                string fileOnIso = fileFullPath.TrimStart(home.FullName.ToCharArray());
+                
+                // The code below might chop off too much of the string. I had this issue.
+                // string fileOnIso = fileFullPath.TrimStart(home.FullName.ToCharArray());
+                
+                // This code simply delimits the string by the root directory path with a backslash. This works better.
+                string fileOnIso = fileFullPath.Split(home.FullName + '\\')[1];
+                
                 output.Add(fileOnIso, file.FullName);
             }
 
